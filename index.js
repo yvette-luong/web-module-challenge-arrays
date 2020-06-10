@@ -36,15 +36,29 @@ var originalFlavors = ["Banana Nut Fudge",
 
 Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
 
-To save you from having to count the items above, you can assume that length of originalFlavors is 31. You may also want to test your function by creating and passing an array of a different length, to make sure it returns FALSE if length is not 31. 
+To save you from having to count the items above, you can assume that length of originalFlavors is 31. 
+You may also want to test your function by creating and passing an array of a different length, to make sure it returns FALSE if length is not 31. 
 
-i.e. is31Flavors(originalFlavors) will return TRUE.*/
+i.e. is31Flavors(originalFlavors) will return TRUE.
 
-function is31Flavors(/*code here*/){
+1- function accept an array 
+2- function return a boolean: TRUE if array.length is 31 , FALSE if array.length is NOT 31
+3- ASSUME length of originalFlavors is 31
+4- TEST function : CREAT & PASS array of different length. SHOULD returns FALSE if length is not 31
+*/
 
+function is31Flavors(){
+        if (originalFlavors.length === 31){
+            return true;
+        } else if (originalFlavors.length !==31) {
+            return false ; 
+        }
+        
     /*code here*/
 
 }
+
+console.log(is31Flavors(originalFlavors)) ;
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -55,7 +69,13 @@ Your function should accept:
 
 Your function should add the flavor to the front of the array and console.log the resulting array.
 
-For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */ 
+For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] 
+
+1- modify array include new flavor  Rainbow Sherbert
+2- function should accept : (1) an array (to hold stuff inside) , (2) a flavor
+3- function SHOULD ADD new flavor on front of the array & console.log the resulting array 
+
+*/ 
 
 function addFlavor(/*code here*/){
 
@@ -72,7 +92,13 @@ Your function should accept:
 
 Your function should remove a flavor from the end of the array and console.log the resulting array.
 
-For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/ 
+For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
+1- function should accept (1) an array (hold stuff)
+2- function should REMOVE last flavor in the OG array
+
+
+
+*/ 
 
 function removeLastFlavor(/*code here*/){
 
@@ -87,7 +113,12 @@ Your function should accept:
 (1) an array 
 (2) an index
 
-For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
+For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully.
+
+1-function RETURN a flavor at a given index in the array 
+2- function accept (1) array, (2) an index 
+
+*/
 
 function getFlavorByIndex(/*code here*/){
 
@@ -106,6 +137,11 @@ For example, removeFlavorByName(originalFlavors, "Vanilla") would return an arra
 
 Hint: You can use .splice() for this
 
+1- create a function : get an index by flavor name & REMOVE flavor from the array 
+2- function accept : (1) an array , (2) a string (flavor)
+3- result should show :  an array - include all the flavors EXCEPT the one want to remove ! 
+
+
 */
 
 function removeFlavorByName(/*code here*/){
@@ -121,7 +157,14 @@ Your function should accept:
 
 2 arguments 1 for your new array and one for your original array
 
-and should return a new array that is identical to the old array. You can name the new array however you'd like. */
+and should return a new array that is identical to the old array. You can name the new array however you'd like. 
+
+1- create a function: called COPY & MAKE COPY of the array
+2- function should accept 2 ARG: (1) ARG for new array , (2) ARG for original array
+3- SHOULD return new array SAME AS old array
+
+
+*/
 
 function copy(/*code here*/){
 
@@ -142,7 +185,15 @@ For example, filterByWord(originalFlavors, "chocolate") should return ["Chocolat
 
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
-hint - you can use the .includes method to help you solve this */
+! hint - you can use the .includes method to help you solve this ! 
+
+1- function to CHECK every item in the array => RETURN new array(called-filteredArray) with the same values in given string
+2- pass a string = papameter & invoke 
+3- function should ACCEPT : (1) an Array, (2) a string (i.e. "chocolate") & RETURN a new array. 
+
+
+
+*/
 
 function filterByWord(/*code here*/){
 
